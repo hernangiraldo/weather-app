@@ -2,6 +2,9 @@
 
 Esta aplicación se desarrollo en base al live de [@LeonidasEsteban](https://twitter.com/LeonidasEsteban) y Diego Velasquez [@Diegoveloper](https://twitter.com/diegoveloper) del día 11 de Julio del 2020.
 
+En este live se desarrolló una aplicación del clima con Flutter. Repositorio del proyecto en flutter:
+[https://github.com/livelivecoding/flutter-weather-app](https://github.com/livelivecoding/flutter-weather-app)
+
 ## Desarrollado con:
   - Ionic 5.x
   - Angular 9.x
