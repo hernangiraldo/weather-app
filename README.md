@@ -7,8 +7,6 @@ Este proyecto se desarrolló con:
   - Angular 9.x
   - Capacitor 2.x
 
-## Importante: 
-Ahora mismo la aplicación no funciona en dispositivos físicos ni en emuladores, porque el API da un error de [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). Ya me puse en contacto con la persona que la desarrollo a ver si puede permitir el acceso a su API desde localhost(porque cuando capacitor levanta la app, la levanta en un localhost dentro del webview). De igual manera, estaré haciendo el cambio para que funcione correctamente en caso de que el creador del API no de respuesta.
 
 ## Requisitos
 ### Node :
@@ -28,15 +26,15 @@ $ npm install
 $ ionic serve
 ```
 
-## Ejecución de la app
+## Ejecución de la app en dispositivos físicos
 
 ```sh
 $ npm install
 $ ionic build // Para construir el empaqueado web
 $ npx cap add android // Para agregar el proyecto android
 $ npx cap add ios // Para agregar el proyecto iOS
-$ npx cap copy //Para copiar el empaquetado web a cada plataforma
-$ npx cap open android // Abrirá el proyecto en Android Studio
+$ ionic cap sync // Para sincronizar el empaquetado web con los dispositivos
+$ npx cap open Android // Abrirá el proyecto en Android
 $ npx cap open ios // Abrirá el proyecto en Xcode
 ```
 
