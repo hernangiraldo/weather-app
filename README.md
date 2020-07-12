@@ -1,6 +1,6 @@
 # Aplicación del clima
 
-Esta aplicación se desarrollo basado en el live de [@LeonidasEsteban](https://twitter.com/LeonidasEsteban) y Diego Velasquez [@Diegoveloper](https://twitter.com/diegoveloper) del día 11 de Julio del 2020.
+Esta aplicación se desarrollo en baseal live de [@LeonidasEsteban](https://twitter.com/LeonidasEsteban) y Diego Velasquez [@Diegoveloper](https://twitter.com/diegoveloper) del día 11 de Julio del 2020.
 
 Este proyecto se desarrolló con:
   - Ionic 5.x
@@ -18,7 +18,7 @@ $ npm install -g @ionic/cli
 
 ## Ejecución de la app en el navegador
 
-#### Importante: Para que se ejecute correctamente en el navegador, debemos instal la siguiente extensión en chrome:
+#### Importante: Para que se ejecute correctamente en el navegador, debemos instalar la siguiente extensión en chrome:
 [Moesif-origin-cors-changer](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc)
 
 ```sh
