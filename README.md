@@ -21,8 +21,9 @@ $ npm install -g @ionic/cli
 
 ## Ejecución de la app en el navegador
 
-#### Importante: Para que se ejecute correctamente en el navegador, debemos instalar la siguiente extensión en chrome:
+#### Importante: Para que se ejecute correctamente en el navegador, debemos instalar la siguiente extensión en chrome (Esto se debe a que el desarrollador de la API tiene bloqueado el accesso desde localhost):
 [Moesif-origin-cors-changer](https://chrome.google.com/webstore/detail/moesif-orign-cors-changer/digfbfaphojjndkpccljibejjbppifbc)
+
 
 ```sh
 $ npm install
