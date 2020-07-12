@@ -26,5 +26,6 @@
   "deleteCityTitle": "Eliminar ciudad",
   "deleteCityMessage": "¿Estás seguro que deseas eliminar esta ciudad?",
   "okBtn": "Sí, eliminar",
-  "cancelBtn": "No, regresar"
+  "cancelBtn": "No, regresar",
+  "cityName": "Nombre de la ciudad"
 }

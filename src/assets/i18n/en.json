@@ -1,5 +1,5 @@
 {
-  "welcome": "Hello,<br/Welcome",
+  "welcome": "Hello,<br/>Welcome",
   "addNewCity": "How about adding a new city?",
   "addCity": "Add city",
   "addCityTitle": "Add city",
@@ -26,5 +26,6 @@
   "deleteCityTitle": "Delete city",
   "deleteCityMessage": "Are you sure you want to delete this city?",
   "okBtn": "Yes, delete",
-  "cancelBtn": "No, return"
+  "cancelBtn": "No, return",
+  "cityName": "City name"
 }
