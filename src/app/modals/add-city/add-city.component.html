@@ -10,7 +10,10 @@
     <ion-icon class="search-outline" name="search-outline"></ion-icon>
     <input #searchInput aria-label type="text" placeholder="Ingrese un texto" />
   </div>
-  <div *ngIf="status.empty">No hay...</div>
+  <div class="add-city__empty" *ngIf="status.empty">
+    <ion-icon class="alert-circle-outline" name="alert-circle-outline"></ion-icon>
+    <p>{{ 'noResults' | translate }}</p>
+  </div>
   <div *ngIf="status.error"></div>
   <div class="fade-in" *ngIf="status.success">
     <app-add-city-card (click)="saveNewCity(city)" *ngFor="let city of cities" [city]="city"></app-add-city-card>

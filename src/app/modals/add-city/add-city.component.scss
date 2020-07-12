@@ -26,4 +26,16 @@
       width: 100%;
     }
   }
+
+  &__empty {
+    color: var(--ion-color-medium);
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+}
+
+
+
+.alert-circle-outline {
+  font-size: 3rem;
 }

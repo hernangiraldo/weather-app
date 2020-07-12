@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { fromEvent } from 'rxjs';
+import { fromEvent, of } from 'rxjs';
 import { City, HttpStatus, IHttpStatus } from '@models/class';
 import { debounceTime, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
 import { AddCityService } from '@app/modals/add-city/add-city.service';
@@ -36,7 +36,12 @@ export class AddCityComponent implements AfterViewInit {
         distinctUntilChanged(),
         switchMap(criteria => {
           this.status = HttpStatus.isLoading();
-          return this.addCityService.getCitiesByQuery(criteria);
+          if (!criteria) {
+            this.status = HttpStatus.isEmpty();
+            return of([]);
+          } else {
+            return this.addCityService.getCitiesByQuery(criteria);
+          }
         })
       ).subscribe(
         cities => {

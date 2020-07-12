@@ -17,21 +17,12 @@ export class AddCityService {
   public getCitiesByQuery(query: string): Observable<City[]> {
     return this.http.get<SearchCityResponseDto[]>(`/location/search/?query=${query}`)
       .pipe(
-        map(cities => {
-          debugger
-          return cities.map(c => new City(c.woeid, c.title));
-        })
+        map(cities => cities.map(c => new City(c.woeid, c.title)))
       );
   }
 
   public getDetailCity(cityId: number) {
-    return this.http.get<CityWeatherDetailResponseDto>(`/location/${cityId}`)
-      .pipe(
-        map(r => {
-          debugger
-          return r;
-        })
-      );
+    return this.http.get<CityWeatherDetailResponseDto>(`/location/${cityId}`);
   }
 
 }
