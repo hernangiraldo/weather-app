@@ -1,4 +1,5 @@
 <section class="city__card" [ngClass]="{ favorite: isFavorite }">
+  <div class="hidden-container" (click)="contentEmitter.emit()"></div>
   <h4 class="city__title">{{ city.name }}</h4>
   <ion-icon class="add-outline" name="add-outline" (click)="buttonEmitter.emit()" [ngClass]="{ favorite: isFavorite }"></ion-icon>
 </section>

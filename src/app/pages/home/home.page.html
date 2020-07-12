@@ -17,7 +17,7 @@
 </ion-content>
 
 <ng-template #myCities>
-  <ion-content class="page__content-padding">
+  <ion-content class="page__content-padding fade-in">
     <h2 class="page__title">{{ 'myCities' | translate }}</h2>
 
     <section class="weather__favorites">
@@ -25,7 +25,7 @@
         *ngFor="let city of favoriteCities | async; let i = index"
         [city]="city"
         [isFavorite]="true"
-        (click)="navigateToDetail(i)"
+        (contentEmitter)="navigateToDetail(i)"
         (buttonEmitter)="deleteCity(city.id)"
       ></app-add-city-card>
     </section>

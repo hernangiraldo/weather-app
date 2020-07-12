@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 1rem 1rem;
   margin: 1rem 0;
+  position: relative;
 }
 
 .city {
@@ -28,4 +29,11 @@
     color: var(--ion-color-danger);
     transform: rotate(45deg);
   }
+}
+.hidden-container {
+  position: absolute;
+  height: 100%;
+  width: 80%;
+  left: 0;
+  top: 0;
 }

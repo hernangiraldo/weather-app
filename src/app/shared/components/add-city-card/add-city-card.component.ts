@@ -9,5 +9,6 @@ import { City } from '@models/class';
 export class AddCityCardComponent {
   @Input() city: City;
   @Input() isFavorite: boolean;
+  @Output() contentEmitter: EventEmitter<any> = new EventEmitter<any>();
   @Output() buttonEmitter: EventEmitter<any> = new EventEmitter<any>();
 }

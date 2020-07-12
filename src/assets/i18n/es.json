@@ -23,5 +23,9 @@
     "Sábado",
     "Domigno"
   ],
-  "noResults": "No hay resultados para tu búsqueda"
+  "noResults": "No hay resultados para tu búsqueda",
+  "deleteCityTitle": "Eliminar ciudad",
+  "deleteCityMessage": "Estás seguro que desear eliminar esta ciudad?",
+  "okBtn": "Sí, eliminar",
+  "cancelBtn": "No, regresar"
 }
