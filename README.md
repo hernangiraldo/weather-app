@@ -1,8 +1,8 @@
 # Aplicación del clima
 
-Esta aplicación se desarrollo en baseal live de [@LeonidasEsteban](https://twitter.com/LeonidasEsteban) y Diego Velasquez [@Diegoveloper](https://twitter.com/diegoveloper) del día 11 de Julio del 2020.
+Esta aplicación se desarrollo en base al live de [@LeonidasEsteban](https://twitter.com/LeonidasEsteban) y Diego Velasquez [@Diegoveloper](https://twitter.com/diegoveloper) del día 11 de Julio del 2020.
 
-Este proyecto se desarrolló con:
+## Desarrollado con:
   - Ionic 5.x
   - Angular 9.x
   - Capacitor 2.x
