@@ -1,3 +1,20 @@
-<p>
-  city-detail works!
-</p>
+<ion-header>
+  <ion-toolbar class="weather-detail__header">
+    <ion-title>
+      <h4 class="weather-detail__title">{{ 'fiveDays' | translate }}</h4>
+    </ion-title>
+    <ion-buttons slot="end" (click)="closeModal()">
+      <ion-icon class="close-outline" name="close-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container  *ngIf="status.success">
+    <div class="weather-detail__card fade-in" *ngFor="let data of days">
+      <app-weather-detail-card [consolidated]="data"></app-weather-detail-card>
+    </div>
+  </ng-container>
+
+  <app-loading *ngIf="status.loading"></app-loading>
+</ion-content>

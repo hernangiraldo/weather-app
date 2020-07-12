@@ -1,0 +1,31 @@
+.city__card {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+}
+
+.city {
+  &__title {
+    margin: 0
+  }
+}
+
+.add-outline {
+  color: #2588d0;
+  font-size: 1.725rem;
+
+}
+
+.favorite {
+  &.city__card {
+    background-color: rgba(204, 204, 204, .1);
+    border-radius: .5rem;
+  }
+
+  &.add-outline {
+    color: var(--ion-color-danger);
+    transform: rotate(45deg);
+  }
+}

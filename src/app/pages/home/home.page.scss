@@ -1,0 +1,27 @@
+.weather {
+  &__content {
+    --padding-top: calc(6rem + var(--ion-safe-area-top));
+    --padding-bottom: 1rem;
+    --padding-start: 3rem;
+    --padding-end: 3rem;
+    --background: url("../../../assets/images/welcome.jpg") no-repeat center center / cover;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+  }
+
+  &__info {
+    margin: 6rem 0 4rem;
+  }
+
+  &__welcome {
+    font-size: 3rem;
+  }
+
+  &__favorites {
+    margin: 4rem 0 0;
+  }
+}

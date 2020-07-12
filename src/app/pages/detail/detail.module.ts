@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
 
 import { DetailPageRoutingModule } from './detail-routing.module';
 
 import { DetailPage } from './detail.page';
+import { SharedModule } from '@app/shared/shared.module';
+import { CityDetailComponent } from '@app/modals/city-detail/city-detail.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
+    SharedModule,
     DetailPageRoutingModule
   ],
-  declarations: [DetailPage]
+  declarations: [
+    DetailPage,
+    CityDetailComponent
+  ]
 })
 export class DetailPageModule {}

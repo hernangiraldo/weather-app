@@ -2,29 +2,64 @@
   height: 100%;
 }
 
-.slide-1, .slide-2, .slide-3 {
-  background-size: auto 100%;
+h1, p, span, strong, .chevron-up-outline {
+  margin: 0;
+  color: white;
+
+.chevron-up-outline {
+  font-size: 1.5rem;
+}}
+
+.slide {
+  background-size: 100% 100%;
   background-position: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5rem 0 2rem;
 }
 
-.slide-1 {
-  background-image: url('./../../../assets/images/rain.jpeg');
+.slide-c {
+  background-image: url('./../../../assets/images/c.jpg');
 }
 
-.slide-2 {
-  background-image: url('./../../../assets/images/sunny.jpeg');
+.slide-h {
+  background-image: url('./../../../assets/images/h.jpg');
 }
 
-.slide-3 {
-  background-image: url('./../../../assets/images/snow.jpeg');
+.slide-hc {
+  background-image: url('./../../../assets/images/hc.jpg');
+}
+
+.slide-hr {
+  background-image: url('./../../../assets/images/hr.jpg');
+}
+
+.slide-lc {
+  background-image: url('./../../../assets/images/lc.jpg');
+}
+
+.slide-lr {
+  background-image: url('./../../../assets/images/lr.jpg');
+}
+
+.slide-s {
+  background-image: url('./../../../assets/images/s.jpg');
+}
+
+.slide-t {
+  background-image: url('./../../../assets/images/t.jpg');
 }
 
 .detail {
   &__back-btn {
+    background-color: transparent;
+    color: white;
+    padding: 1rem;
     position: absolute;
     top: calc(2rem + var(--ion-safe-area-top));
-    left: 2rem;
+    font-size: 1.5rem;
     z-index: 2;
+    outline: none;
   }
 
   &__show-details {
@@ -33,5 +68,36 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+  }
+
+  &__city-info {
+    p {
+      font-size: .875rem;
+    }
+  }
+
+  &__temperature {
+    display: flex;
+    font-weight: 900;
+    font-size: 4rem;
+    justify-content: center;
+    margin: 3rem 0;
+
+    .degrees {
+      font-size: 1.5rem;
+      transform: translateY(1.5rem);
+    }
+  }
+
+  &__additional-info {
+    width: 100%;
+
+    strong {
+      font-size: .725rem;
+    }
+
+    p {
+      margin-top: .5rem;
+    }
   }
 }

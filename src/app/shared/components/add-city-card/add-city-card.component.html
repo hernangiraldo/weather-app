@@ -1,0 +1,4 @@
+<section class="city__card" [ngClass]="{ favorite: isFavorite }">
+  <h4 class="city__title">{{ city.name }}</h4>
+  <ion-icon class="add-outline" name="add-outline" (click)="buttonEmitter.emit()" [ngClass]="{ favorite: isFavorite }"></ion-icon>
+</section>

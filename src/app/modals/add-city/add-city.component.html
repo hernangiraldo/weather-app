@@ -1,1 +1,24 @@
-<button (click)="closeModal()">Close</button>
+<ion-header>
+  <app-header (closeEmitter)="closeModal()"></app-header>
+</ion-header>
+
+<ion-content class="page__content-padding">
+
+  <h2 class="page__title">{{ 'addCityTitle' | translate }}</h2>
+
+  <div class="add-city__search-input">
+    <ion-icon class="search-outline" name="search-outline"></ion-icon>
+    <input #searchInput aria-label type="text" placeholder="Ingrese un texto" />
+  </div>
+  <div *ngIf="status.empty">No hay...</div>
+  <div *ngIf="status.error"></div>
+  <div class="fade-in" *ngIf="status.success">
+    <app-add-city-card (click)="saveNewCity(city)" *ngFor="let city of cities" [city]="city"></app-add-city-card>
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="status.loading || detailStatus.loading">
+  <ion-toolbar class="weather__footer">
+    <app-loading></app-loading>
+  </ion-toolbar>
+</ion-footer>

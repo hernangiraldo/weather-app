@@ -27,19 +27,77 @@
 
 .button {
   --box-shadow: none;
-  height: 44px;
+  height: 40px;
 }
 
 .ion-fab-button {
   --box-shadow: none;
 }
 
+.weather__footer {
+  --border-width: 0 !important;
+}
+
+.header-ios {
+  --border-weight: 0 !important;
+}
+
+.header-md {
+  &::after {
+    background-image: none;
+  }
+}
+
 .detail__city-conditions {
   .modal-wrapper {
-    height: 60%;
+    height: 80%;
+    border-radius: 2rem 2rem 0 0;
   }
 
   &.sc-ion-modal-ios-h, &.sc-ion-modal-md-h {
     align-items: flex-end !important;
+  }
+}
+
+.custom-toast {
+  text-align: center;
+
+  &.info {
+    color: white;
+    --background: var(--ion-color-medium);
+  }
+
+  &.error {
+    color: white;
+    --background: var(--ion-color-danger);
+  }
+
+  &.success {
+    color: white;
+    --background: var(--ion-color-secondary);
+  }
+}
+
+.fade-in {
+  animation: fade-in .2s;
+}
+
+.page {
+  &__title {
+    padding: 0 1rem;
+  }
+
+  &__content-padding {
+    --padding-end: 2rem;
+    --padding-start: 2rem;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

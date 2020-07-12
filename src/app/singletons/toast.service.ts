@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 
 import { ToastTypes } from '@models/enum';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +10,17 @@ import { ToastTypes } from '@models/enum';
 export class ToastService {
 
   constructor(
+    private translate: TranslateService,
     private toastController: ToastController
   ) { }
 
-  public async showToast(key: string, type: ToastTypes) {
-    const message = '';
+  public async showToast(key: string, type: ToastTypes = ToastTypes.ERROR) {
+    const message = this.translate.instant(key || 'default');
 
     const toast = await this.toastController.create({
       message,
       position: 'top',
-      cssClass: type.toString(),
+      cssClass: `custom-toast ${type.toString()}`,
       duration: 3000,
     });
 

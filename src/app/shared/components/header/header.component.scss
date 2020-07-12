@@ -1,0 +1,14 @@
+.header {
+  --border-width: 0 !important;
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  height: 6rem;
+  padding: var(--ion-safe-area-top, 0) 1rem 0;
+  box-sizing: content-box;
+
+  &.transparent {
+    position: fixed;
+    --background: transparent;
+  }
+}

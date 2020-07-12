@@ -1,0 +1,24 @@
+<div class="weather-card__temperature">
+  <div class="day">
+    <h4>{{ getDay(consolidated.applicable_date) }}</h4>
+    <img src="assets/images/icons/{{ consolidated.weather_state_abbr }}.svg" alt="">
+  </div>
+  <h4>{{ consolidated.the_temp | number: '1.0-0' }}<sup class="degrees">°C</sup></h4>
+</div>
+
+<ion-grid class="weather-card__additional-info">
+  <ion-row>
+    <ion-col>
+      <strong>{{ 'wind' | translate }}</strong>
+      <p>{{ consolidated.wind_speed | number: '1.1-2' }}%</p>
+    </ion-col>
+    <ion-col>
+      <strong>{{ 'rain' | translate }}</strong>
+      <p>{{ consolidated.predictability }}%</p>
+    </ion-col>
+    <ion-col>
+      <strong>{{ 'humidity' | translate }}</strong>
+      <p>{{ consolidated.humidity }}%</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>

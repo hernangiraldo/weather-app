@@ -1,3 +1,26 @@
 {
-  "home": "Home page"
+  "home": "Home page",
+  "welcome": "Hola,<br/>Bienvenido",
+  "addNewCity": "Qué te parece si agregamos una nueva ciudad?",
+  "addCity": "Agregar ciudad",
+  "addCityTitle": "Agregar ciudad",
+  "default": "Ha ocurrido un error interno",
+  "cityExist": "Ya es una ciudad Favorita",
+  "citySaved": "Ciudad guardada",
+  "myCities": "Mis ciudades",
+  "wind": "Viento",
+  "rain": "Lluvia",
+  "humidity": "Humedad",
+  "minTemp": "Temp Min",
+  "maxTemp": "Temp Max",
+  "fiveDays": "Pronóstico 5 días",
+  "days": [
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+    "Domigno"
+  ]
 }

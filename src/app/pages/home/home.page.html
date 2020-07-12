@@ -1,20 +1,39 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>{{ 'home' | translate }}</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header
+    [backBtn]="false"
+    [transparent]="!(favoriteCities | async)?.length"
+></app-header>
 
-<ion-content class="ion-padding">
-  <div *ngIf="status.loading">Loading...</div>
-  <div *ngIf="status.error">Error</div>
-  <div *ngIf="status.success" (click)="navigateTo()">
-    {{ person | json }}
+<ion-content class="weather__content fade-in" *ngIf="!(favoriteCities | async)?.length; else myCities">
+
+  <img class="weather__logo" src="assets/images/logo.png" alt="Logo de la app">
+
+  <div class="weather__info">
+    <h1 class="weather__welcome" [innerHTML]="'welcome' | translate"></h1>
+    <p class="weather__call-to-action">{{ 'addNewCity' | translate }}</p>
   </div>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button class="ion-fab-button" (click)="addCity()">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <ion-button shape="round" color="light"  expand="block" (click)="addCity()">{{ 'addCity' | translate }}</ion-button>
 
 </ion-content>
+
+<ng-template #myCities>
+  <ion-content class="page__content-padding">
+    <h2 class="page__title">{{ 'myCities' | translate }}</h2>
+
+    <section class="weather__favorites">
+      <app-add-city-card
+        *ngFor="let city of favoriteCities | async; let i = index"
+        [city]="city"
+        [isFavorite]="true"
+        (click)="navigateToDetail(i)"
+        (buttonEmitter)="deleteCity(city.id)"
+      ></app-add-city-card>
+    </section>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="addCity()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+</ng-template>

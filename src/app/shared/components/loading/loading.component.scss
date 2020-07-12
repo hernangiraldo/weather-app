@@ -1,0 +1,17 @@
+:host {
+  padding: 1rem;
+}
+
+.loader {
+  animation:spin 4s linear infinite;
+  display: block;
+  height: 40px;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}

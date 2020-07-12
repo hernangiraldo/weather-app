@@ -1,0 +1,7 @@
+<ion-header>
+  <ion-toolbar class="header" [ngClass]="{ transparent: transparent }">
+    <ion-buttons slot="start" (click)="closeEmitter.emit()">
+      <ion-icon *ngIf="backBtn" name="chevron-back-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

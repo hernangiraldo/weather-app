@@ -1,19 +1,61 @@
 <ion-content>
   <button class="detail__back-btn" (click)="goBack()">
-    Atrás
+    <ion-icon name="chevron-back-outline"></ion-icon>
   </button>
 
-  <button class="detail__show-details" (click)="showDetails()">Show Details</button>
+<!--  <button class="detail__show-details" (click)="showDetails()">Show Details</button>-->
 
   <ion-slides class="ion-slides" [options]="slideOpts">
-    <ion-slide class="slide-1">
-      <h1>Slide 1</h1>
-    </ion-slide>
-    <ion-slide class="slide-2">
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide class="slide-3">
-      <h1>Slide 3</h1>
+    <ion-slide *ngFor="let city of favorites | async" class="slide slide-{{ city.weather.consolidated_weather[0].weather_state_abbr }}">
+
+      <div class="detail__city-info">
+        <h1>{{ city.name }}, {{ city.weather.parent.title }}</h1>
+        <p>{{ city.weather.consolidated_weather[0].created | date: 'medium' }}</p>
+      </div>
+
+      <div class="detail__temperature">
+        <span class="detail__temperature">{{ city.weather.consolidated_weather[0].the_temp | number: '1.0-0' }}<sup class="degrees">°C</sup></span>
+      </div>
+
+      <div class="detail__additional-info">
+        <ion-grid>
+          <ion-row>
+            <ion-col (click)="showDetails(city.id)">
+              <ion-icon class="chevron-up-outline" name="chevron-up-outline"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <strong>{{ 'wind' | translate }}</strong>
+              <p>{{ city.weather.consolidated_weather[0].wind_speed | number: '1.1-2' }}%</p>
+            </ion-col>
+            <ion-col>
+              <strong>{{ 'rain' | translate }}</strong>
+              <p>{{ city.weather.consolidated_weather[0].predictability }}%</p>
+            </ion-col>
+            <ion-col>
+              <strong>{{ 'humidity' | translate }}</strong>
+              <p>{{ city.weather.consolidated_weather[0].humidity }}%</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <strong>{{ 'minTemp' | translate }}</strong>
+              <p>{{ city.weather.consolidated_weather[0].min_temp }}</p>
+            </ion-col>
+            <ion-col>
+              <strong>{{ 'maxTemp' | translate }}</strong>
+              <p>{{ city.weather.consolidated_weather[0].max_temp }}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <div class="">
+
+        </div>
+
+      </div>
+
     </ion-slide>
   </ion-slides>
 </ion-content>

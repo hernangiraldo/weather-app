@@ -1,43 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
-import { HomeService } from '@app/pages/home/home.service';
-import { HttpStatus, IHttpStatus } from '@models/class/http.class';
 import { AddCityComponent } from '@app/modals/add-city/add-city.component';
+import { CitiesService } from '@singletons/cities.service';
+import { Observable } from 'rxjs';
+import { City } from '@models/class';
+import { ParamsService } from '@singletons/params.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
 
-  public person: any;
-  public status: IHttpStatus;
+  public favoriteCities: Observable<City[]>;
 
   constructor(
     private navCtrl: NavController,
-    private homeService: HomeService,
-    private modalController: ModalController
-  ) { }
-
-  ngOnInit() {
-    this.getPerson();
-  }
-
-  public getPerson() {
-    this.status = HttpStatus.isLoading();
-    this.homeService.getRandomPerson()
-      .subscribe(
-        data => {
-          this.status = HttpStatus.isSuccess();
-          this.person = data;
-        },
-        () => this.status = HttpStatus.isError()
-      );
-  }
-
-  public navigateTo() {
-    this.navCtrl.navigateForward('/detail');
+    private modalController: ModalController,
+    private citiesService: CitiesService,
+    private paramsService: ParamsService
+  ) {
+    this.favoriteCities = this.citiesService.getFavoritesCities();
   }
 
   public async addCity() {
@@ -48,6 +32,15 @@ export class HomePage implements OnInit {
     });
 
     await modal.present();
+  }
+
+  public deleteCity(cityId: number) {
+    this.citiesService.removeUserCity(cityId);
+  }
+
+  public navigateToDetail(index: number) {
+    this.paramsService.setParams({ index });
+    this.navCtrl.navigateForward('/detail');
   }
 
 }
