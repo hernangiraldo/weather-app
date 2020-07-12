@@ -21,7 +21,8 @@ export class AppComponent {
     private storageService: StorageService,
     private citiesService: CitiesService
   ) {
-    this.translate.use('es');
+    const lang = navigator.language.split('-')[0];
+    this.translate.use(lang || 'es');
     this.navCtrl.navigateRoot('/');
     this.initFavorites();
   }

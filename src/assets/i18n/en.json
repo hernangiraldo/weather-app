@@ -1,0 +1,30 @@
+{
+  "welcome": "Hello,<br/Welcome",
+  "addNewCity": "How about adding a new city?",
+  "addCity": "Add city",
+  "addCityTitle": "Add city",
+  "default": "Sorry! We got a problme",
+  "cityExist": "It's already been added to your favorites",
+  "citySaved": "Saved city",
+  "myCities": "My cities",
+  "wind": "Wind",
+  "rain": "Rain",
+  "humidity": "Humidity",
+  "minTemp": "Temp Min",
+  "maxTemp": "Temp Max",
+  "fiveDays": "5 day weather forecast",
+  "days": [
+    "Monday",
+    "Tuesday",
+    "Wenesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  "noResults": "There's no results for your search",
+  "deleteCityTitle": "Delete city",
+  "deleteCityMessage": "Are you sure you want to delete this city?",
+  "okBtn": "Yes, delete",
+  "cancelBtn": "No, return"
+}

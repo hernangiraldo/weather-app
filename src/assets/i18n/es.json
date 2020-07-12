@@ -1,7 +1,6 @@
 {
-  "home": "Home page",
   "welcome": "Hola,<br/>Bienvenido",
-  "addNewCity": "Qué te parece si agregamos una nueva ciudad?",
+  "addNewCity": "¿Qué te parece si agregamos una nueva ciudad?",
   "addCity": "Agregar ciudad",
   "addCityTitle": "Agregar ciudad",
   "default": "Ha ocurrido un error interno",
@@ -21,11 +20,11 @@
     "Jueves",
     "Viernes",
     "Sábado",
-    "Domigno"
+    "Domingo"
   ],
   "noResults": "No hay resultados para tu búsqueda",
   "deleteCityTitle": "Eliminar ciudad",
-  "deleteCityMessage": "Estás seguro que desear eliminar esta ciudad?",
+  "deleteCityMessage": "¿Estás seguro que deseas eliminar esta ciudad?",
   "okBtn": "Sí, eliminar",
   "cancelBtn": "No, regresar"
 }

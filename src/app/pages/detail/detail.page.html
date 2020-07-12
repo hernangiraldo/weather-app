@@ -5,7 +5,7 @@
 
 <!--  <button class="detail__show-details" (click)="showDetails()">Show Details</button>-->
 
-  <ion-slides class="ion-slides" [options]="slideOpts">
+  <ion-slides class="ion-slides" pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let city of favorites | async" class="slide slide-{{ city.weather.consolidated_weather[0].weather_state_abbr }}">
 
       <div class="detail__city-info">
@@ -41,11 +41,11 @@
           <ion-row>
             <ion-col>
               <strong>{{ 'minTemp' | translate }}</strong>
-              <p>{{ city.weather.consolidated_weather[0].min_temp }}</p>
+              <p>{{ city.weather.consolidated_weather[0].min_temp | number: '1.1-2' }}</p>
             </ion-col>
             <ion-col>
               <strong>{{ 'maxTemp' | translate }}</strong>
-              <p>{{ city.weather.consolidated_weather[0].max_temp }}</p>
+              <p>{{ city.weather.consolidated_weather[0].max_temp | number: '1.1-2' }}</p>
             </ion-col>
           </ion-row>
         </ion-grid>
