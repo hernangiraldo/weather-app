@@ -1,0 +1,37 @@
+.ion-slides {
+  height: 100%;
+}
+
+.slide-1, .slide-2, .slide-3 {
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.slide-1 {
+  background-image: url('./../../../assets/images/rain.jpeg');
+}
+
+.slide-2 {
+  background-image: url('./../../../assets/images/sunny.jpeg');
+}
+
+.slide-3 {
+  background-image: url('./../../../assets/images/snow.jpeg');
+}
+
+.detail {
+  &__back-btn {
+    position: absolute;
+    top: calc(2rem + var(--ion-safe-area-top));
+    left: 2rem;
+    z-index: 2;
+  }
+
+  &__show-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+}

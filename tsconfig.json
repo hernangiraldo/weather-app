@@ -2,6 +2,18 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@singletons/*": [
+        "src/app/singletons/*"
+      ],
+      "@models/*": [
+        "src/app/models/*"
+      ],
+      "@modals/*": ["app/modals/*"]
+    },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,

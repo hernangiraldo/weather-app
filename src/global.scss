@@ -24,3 +24,22 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.button {
+  --box-shadow: none;
+  height: 44px;
+}
+
+.ion-fab-button {
+  --box-shadow: none;
+}
+
+.detail__city-conditions {
+  .modal-wrapper {
+    height: 60%;
+  }
+
+  &.sc-ion-modal-ios-h, &.sc-ion-modal-md-h {
+    align-items: flex-end !important;
+  }
+}
